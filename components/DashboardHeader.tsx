@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { FiSettings, FiBell } from 'react-icons/fi';
+import { FiSettings } from 'react-icons/fi';
 
 const DashboardHeader: React.FC = () => {
   return (
