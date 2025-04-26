@@ -4,7 +4,7 @@ import {
   FiHome, FiCheckSquare, FiUploadCloud, FiUsers, FiCpu,
   FiTarget, FiBarChart2, FiSettings, FiMessageSquare
 } from 'react-icons/fi';
-import Badge from './ui/Badge'; // Assuming Badge component exists
+import Badge from './ui/Badge'; 
 
 const navItems = [
   { name: 'Home', icon: FiHome, href: '/', active: true },

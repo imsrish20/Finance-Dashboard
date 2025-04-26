@@ -2,7 +2,7 @@
 import React from 'react';
 import Card from '../ui/Card';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
-import { FiCheckCircle, FiCircle } from 'react-icons/fi'; // Using FiCircle for pending
+import { FiCheckCircle, FiCircle } from 'react-icons/fi'; 
 
 const AccountProgressCard: React.FC = () => {
   const percentage = 85;
@@ -50,16 +50,11 @@ const AccountProgressCard: React.FC = () => {
           {remainingSteps.map((step) => (
              <li key={step.name} className="flex items-center justify-between text-sm text-gray-500 mb-2">
                <span>{step.name}</span>
-               {/* Using FiCircle for pending visual, you can customize */}
                <FiCircle className="h-5 w-5 text-gray-300" />
              </li>
           ))}
         </ul>
-      </div>
-       {/* JSN Placeholder */}
-       <div className="absolute bottom-2 right-2">
-           <span className="text-xs font-bold text-white bg-pink-500 px-2 py-1 rounded">jsn</span>
-       </div>
+      </div> 
     </Card>
   );
 };

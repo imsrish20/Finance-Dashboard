@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Badge from '../ui/Badge';
-import { FiChevronUp } from 'react-icons/fi'; // Icon for collapse/expand
+import { FiChevronUp } from 'react-icons/fi'; 
 
 const questions = [
   {

@@ -1,19 +1,15 @@
 import React from 'react';
-import Image from 'next/image'; // ✅ Import Image correctly
+import Image from 'next/image'; 
 import { FiSend } from 'react-icons/fi';
 
 const ChatAssistant: React.FC = () => {
   return (
     <div className="bg-white p-6 pt-10 flex flex-col items-center text-center h-full">
-      {/* Assistant Logo */}
-      <Image src="/image.png" width={64} height={64} alt="Assistant Logo" /> {/* ✅ Added alt */}
 
-      {/* Title */}
+      <Image src="/image.png" width={64} height={64} alt="Assistant Logo" /> 
       <h1 className="text-2xl font-semibold text-gray-800 mb-2">
         Welcome to the AI Chat Assistant
       </h1>
-
-      {/* Description */}
       <p className="text-gray-500 mb-8">
         Ask anything about your franchise operations, get insights, or request reports.
       </p>

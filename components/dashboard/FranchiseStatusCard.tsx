@@ -1,7 +1,6 @@
-// components/dashboard/FranchiseStatusCard.tsx
 import React from 'react';
-import Card from '../ui/Card'; // Adjust path if needed
-import Badge from '../ui/Badge'; // Adjust path if needed
+import Card from '../ui/Card';
+import Badge from '../ui/Badge'; 
 import Image from 'next/image';
 import { FiArrowUpRight, FiTrendingUp } from 'react-icons/fi';
 
@@ -13,7 +12,6 @@ const stages = [
 ];
 const totalOnboarded = 14;
 const avatars = [
-    // IMPORTANT: Replace placeholders with actual paths from your public folder
   '/placeholder-avatar2.png',
   '/placeholder-avatar3.png',
   '/placeholder-avatar4.png',
@@ -21,7 +19,6 @@ const avatars = [
   '/placeholder-avatar1.png',
 ];
 
-// Data for Wellbeing section (can be made dynamic later)
 const totalFranchiseesWellbeing = 20;
 const targetAmount = "$500,000";
 const currentAmount = "$450,000";
@@ -31,11 +28,10 @@ const onboardingGrowth = "7.4%";
 
 const FranchiseStatusCard: React.FC<{ className?: string }> = ({ className }) => {
   return (
-    <Card title="Franchisee Status" className={className}> {/* Combined Title */}
+    <Card title="Franchisee Status" className={className}> 
 
-      {/* --- Franchisees Onboard Section (Top Part) --- */}
       <div>
-        <h3 className="text-md font-semibold text-gray-700 mb-3">Onboarding</h3> {/* Subheading */}
+        <h3 className="text-md font-semibold text-gray-700 mb-3">Onboarding</h3> 
         <div className="flex items-center justify-between mb-4">
           <span className="text-4xl font-bold text-gray-800">{totalOnboarded}</span>
           <div className="flex items-center space-x-2">
@@ -46,7 +42,6 @@ const FranchiseStatusCard: React.FC<{ className?: string }> = ({ className }) =>
                   {avatars.map((src, index) => (
                       <Image key={index} className="inline-block h-8 w-8 rounded-full ring-2 ring-white" src={src} alt={`Franchisee ${index + 1}`} width={32} height={32}/>
                   ))}
-                  {/* Calculate remaining count based on totalOnboarded vs avatars shown */}
                   <div className="flex items-center justify-center h-8 w-8 rounded-full ring-2 ring-white bg-gray-200 text-xs font-medium text-gray-600">
                     +{Math.max(0, totalOnboarded - avatars.length)}
                   </div>
@@ -66,7 +61,7 @@ const FranchiseStatusCard: React.FC<{ className?: string }> = ({ className }) =>
             <div key={stage.name} className="flex items-center justify-between text-sm">
               <div className="flex items-center">
                 <span className={`h-2.5 w-2.5 rounded-full mr-2 ${stage.color}`}></span>
-                <span className={`${stage ? 'font-medium text-gray-800' : 'text-gray-600'}`}> {/* Make active bold */}
+                <span className={`${stage ? 'font-medium text-gray-800' : 'text-gray-600'}`}> 
                   {stage.name}
                 </span>
               </div>
@@ -78,9 +73,9 @@ const FranchiseStatusCard: React.FC<{ className?: string }> = ({ className }) =>
       {/* --- End Onboard Section --- */}
 
 
-      {/* --- Separator --- */}
+
       <hr className="my-6 border-gray-200" />
-      {/* --- End Separator --- */}
+
 
 
       {/* --- Financial Wellbeing Section (Bottom Part) --- */}
@@ -101,15 +96,12 @@ const FranchiseStatusCard: React.FC<{ className?: string }> = ({ className }) =>
             <p className="text-sm text-gray-500 mb-1">Target</p>
             <p className="text-xl font-semibold text-gray-800">{targetAmount}</p>
           </div>
-          {/* Ensure 'highlight' is defined in tailwind.config or use specific class like border-pink-500 */}
-          <div className="bg-gray-100 rounded-lg p-4 text-center "> {/* Highlighted */}
+          <div className="bg-gray-100 rounded-lg p-4 text-center "> 
             <p className="text-sm text-gray-500 mb-1">Current</p>
             <p className="text-xl font-semibold text-gray-800">{currentAmount}</p>
           </div>
         </div>
       </div>
-      {/* --- End Wellbeing Section --- */}
-
     </Card>
   );
 };
